@@ -7,19 +7,19 @@ import { Html, useGLTF,OrbitControls } from "@react-three/drei";
 function Model({ url }) {
   const gltf = useGLTF(url, true);
   
-  return <primitive object={gltf.scene} dispose={null} />;
+  return <primitive object={gltf.scene} dispose={null} args={[3,3,3]} />;
   
 }
 
 const HTMLContent = () => {
   const ref = useRef();
-  useFrame(() => (ref.current.rotation.x += 0.01));
+  useFrame(() => (ref.current.rotation.y += 0.01));
+  useFrame(() => (ref.current.rotation.x += 0.02));
   return (
     <Section factor={1.5} offset={1}>
-      <group position={[0, 218, 90]}>
-        <mesh ref={ref}  position={[0, 35, 0]}>
-    
-          <Model url='/scene.gltf'/>
+      <group position={[0, 0, -300]}>
+        <mesh ref={ref}  position={[0, 0, 0]} >
+          <Model url='/3D/scene.gltf'/>
         </mesh>
 
       </group>
@@ -49,14 +49,14 @@ export default function App() {
       {/* R3F Canvas */}
       <Canvas
         colormanagement='true'
-        camera={{ position: [0, 0, 120], fov: 70 }}>
+        camera={{ position: [0, 0,0], fov: 90 }}>
           <Lights/>
           <HTMLContent
             bgColor='#f15946'
             position={250}>
             
           </HTMLContent>
-         
+          
       </Canvas>
      
     </div>
