@@ -32,7 +32,7 @@ const HTMLContent = () => {
         <span>
       <b className="first">Hi, I am Abderrahim Kadnaoui.</b> Welcome to My Portfolio </span> <br/>{' '}
         <span className="type" >
-          {text}
+         {text}
         </span>
         <br/>
        <b className='quote'> Passionate about technology and it’s possibilities.</b>

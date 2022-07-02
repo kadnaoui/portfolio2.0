@@ -1,17 +1,23 @@
 import React from 'react'
 import Index from './pages/Index'
-import Home from './components/3D'
 import Header from './components/header'
-
 import './index.css'
+import Contact from './pages/Contact'
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+} from "react-router-dom";
 
 const App = () => {
   return (
-    <>
-    <Header/>
-      <Index/>
-    </>
-  
+      <BrowserRouter>
+      <Header/>
+    <Routes>
+      <Route path="/" element={<Index />} />
+      <Route path="contact" element={<Contact/>} />
+    </Routes>
+  </BrowserRouter>
   )
 }
 
