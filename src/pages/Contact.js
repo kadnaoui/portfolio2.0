@@ -8,9 +8,14 @@ import ContactTextarea from '../components/ContactTextarea';
 import {toast , ToastContainer} from'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import emailjs from '@emailjs/browser';
+import ReCAPTCHA from 'react-google-recaptcha';
+import { BsLinkedin } from 'react-icons/bs';
+import { BsInstagram } from 'react-icons/bs';
+import { BsFacebook } from 'react-icons/bs';
+
 
 const Contact = () => {
-
+  const recaptchaRef = React.createRef();
     const initialValues=  {
         Name: "",
         Email: "",
@@ -25,10 +30,9 @@ const Contact = () => {
       })
       const onSubmit=(values,{resetForm})=>{
         console.log(values);
-        resetForm( { Name: "",
-        Email: "",
-        Subject: "",
-        Text: ""})
+        recaptchaRef.current.execute();
+        const token = recaptchaRef.current.getValue();
+       if (token!=="") {
         emailjs.send("service_bcskqwo","template_mj1fmbu",values,"user_AQSkmzrJvb1dD4QWoYIXk").then((result) => {
           console.log(result.text,values);
           toast.success('Your Email was sent Succesfully');
@@ -42,6 +46,7 @@ const Contact = () => {
           console.log(error.text);
           toast.error('There was an error. Try Again!')
       });
+       } 
       }
   return (
     <Wrapper>
@@ -53,16 +58,25 @@ const Contact = () => {
   <ContactInput id='Subject' name='Subject' label='Subject' placeholder='Subject'type='text' />
   <ContactTextarea id='Text' name='Text' label='Text' placeholder='Text'  type='text' />
  <button type='submit' className='button' >Send</button>
+ 
+ 
   </Form>
+  <ReCAPTCHA
+    sitekey="6LdWUL4gAAAAAIUfdcB-GOqyJYeyGdPPWF831N6D"
+    ref={recaptchaRef}
+    size="invisible"
+  />
+  <ToastContainer/>
   <div className="img">
   <img src={image} alt=''></img>
-  {/* <div className="contact">
-        <ImageP src={LinkedIn} style={'width:4vh;height:4vh;'}onClick={()=>window.open('https://www.linkedin.com/in/abderrahim-kadnaoui-9a71aa22a/', '_blank')}/>
-        <ImageP src={Instagram}  style={'width:4vh;height:4vh;'}onClick={()=>window.open('https://www.instagram.com/abderrahimkadnaoui/', '_blank')}/>
-      </div> */}
+<div className='icons'>
+      <BsLinkedin onClick={()=>window.open('https://www.linkedin.com/in/abderrahim-kadnaoui-9a71aa22a/', '_blank')}/>
+      <BsInstagram  onClick={()=>window.open('https://www.instagram.com/abderrahimkadnaoui/', '_blank')}/>
+      <BsFacebook  onClick={()=>window.open('https://www.facebook.com/abderrahim29/', '_blank')}/>
+      
+      </div>
   </div>
   
-  <ToastContainer/>
     </Wrapper>
   )
 }

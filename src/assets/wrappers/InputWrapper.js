@@ -9,8 +9,7 @@ input,textarea{
     height: 5.32vh;  
     border: 0.14vw solid #000000;
 }
-input,textarea::placeholder {padding-inline:3vh;
-}
+input,textarea{padding-inline:3vh;}
 
 textarea{
     height:20vh;
