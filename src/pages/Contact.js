@@ -7,6 +7,7 @@ import image from '../assets/cont.svg';
 import ContactTextarea from '../components/ContactTextarea';
 import {toast , ToastContainer} from'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { motion } from 'framer-motion';
 import emailjs from '@emailjs/browser';
 import ReCAPTCHA from 'react-google-recaptcha';
 import { BsLinkedin } from 'react-icons/bs';
@@ -48,7 +49,31 @@ const Contact = () => {
       });
        } 
       }
+      const container = {
+        hidden: { opacity: 1, scale: 0 },
+        visible: {
+          opacity: 1,
+          scale: 1,
+          transition: {
+            delayChildren: 0.3,
+            staggerChildren: 0.2
+          }
+        }
+      };
+      
+      const item = {
+        hidden: { y: 20, opacity: 0 },
+        visible: {
+          y: 0,
+          opacity: 1
+        }
+      };
   return (
+    <motion.div
+    initial={{width:0}}
+    animate={{width:"100%"}}
+    exit={{x:window.innerWidth,transition:{duration:0.4}}}
+>
     <Wrapper>
         <Form initialValues={initialValues} validationSchema={validationSchema} onSubmit={onSubmit} >
             <h1>Contact</h1>
@@ -78,6 +103,8 @@ const Contact = () => {
   </div>
   
     </Wrapper>
+    
+    </motion.div>
   )
 }
 

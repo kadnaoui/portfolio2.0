@@ -2,6 +2,7 @@ import React from 'react'
 import Shape from '../components/3D'
 import Wrapper from '../assets/wrappers/HomeWrapper'
 import { useTypewriter } from 'react-simple-typewriter'
+import { motion } from 'framer-motion'
 
 const Index = () => {
   const {text} = useTypewriter({
@@ -9,8 +10,14 @@ const Index = () => {
     loop: false
   })
   return (
+    <motion.div
+    initial={{width:0}}
+    animate={{width:"100%"}}
+    exit={{x:window.innerWidth,transition:{duration:0.4}}}
+>
     <Wrapper>
-        
+
+
         <Shape/>
         <div className='txt'>
         <h1 > 
@@ -25,6 +32,8 @@ const Index = () => {
         </div>
 
     </Wrapper>
+    
+    </motion.div>
   )
 }
 

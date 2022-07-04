@@ -1,11 +1,12 @@
 import Styled from 'styled-components'
 
 const Wrapper=Styled.section`
-height:93vh;
-width:100%;
 @import url('https://fonts.googleapis.com/css2?family=Heebo&display=swap');
-
-
+height:100vh;
+width:100%;
+z-index: 1;
+padding-top:10vh;
+position: relative;
 display:flex;
 align-items:center;
 justify-content:center;

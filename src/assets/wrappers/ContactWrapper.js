@@ -1,12 +1,14 @@
 import Styled from "styled-components"
 const Wrapper=Styled.section`
-
-min-height:91vh;
+z-index: 1;
+position: relative;
+min-height:100vh;
 height:fit-content;
 width:100%;
 display:flex;
 align-items:center;
 justify-content:space-evenly;
+padding-top:10vh;
 form{
     display: flex;
     flex-direction:column;
@@ -29,6 +31,7 @@ form{
         font-weight: 900;
         font-size: 5.32vh;
         line-height: 5.32vh;
+        overflow-y:hidden;
     }
     h2{
         font-family: 'Heebo' , sans-serif;
@@ -37,6 +40,7 @@ form{
         font-size:3vh;
         line-height: 4vh;
         margin-block:2vh;
+        overflow-y:hidden;
     }
 }
 .errorMessage{
@@ -65,7 +69,7 @@ form{
  }
 }
 
-@media (max-width: 900px) { 
+@media (max-width: 932px) { 
     flex-direction:column;
     align-items:center;
     justify-content:space-between;
