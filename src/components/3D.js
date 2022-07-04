@@ -20,8 +20,8 @@ const HTMLContent = () => {
   useFrame(() => (ref.current.rotation.y += 0.01));
   useFrame(() => (ref.current.rotation.x += 0.02));
   return (
-    <Section factor={1.5} offset={1} >
-      <group position={[0, 0,-300]}  >
+    <Section factor={1.5} offset={1}>
+      <group position={[0, 0, -300]}>
         <mesh ref={ref}  position={[0, 0, 0]} >
           <Model url='/3D/scene.gltf'/>
         </mesh>
@@ -56,6 +56,7 @@ const Lights = () => {
 
 
 export default function Shape() {
+
 
   return (
     <div className="shape">
