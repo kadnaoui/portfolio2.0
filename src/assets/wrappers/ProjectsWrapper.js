@@ -67,9 +67,10 @@ h1{
     .project{
         width: 100%;
         height: 50vh;
+        border: 1vw solid black;
     h1{
-        font-size:5vw;
-        line-height:6vw;
+        font-size:10vw;
+        line-height:12vw;
     }
 
 }
