@@ -2,6 +2,7 @@ import React from 'react';
 import Wrapper from '../assets/wrappers/AboutWrapper';
 import Image from '../assets/mecv.png'
 import { motion } from 'framer-motion';
+import CV from '../assets/MyCv.pdf'
 
 
 const About = () => {
@@ -48,7 +49,7 @@ something I don't know, I'll figure out how to learn it.
   <h2>Tools and technologies that I am currently learning</h2>
 <p>NextJs, Express, MongoDb, Firebase, Jest, TDD.</p>
 </div>
-<button onClick={()=>window.open('/CV', '_blank')}>View CV</button>    
+<button onClick={()=>window.open(CV, '_blank')}>View CV</button>    
         </div>
         <motion.div className="right"
  variants={item}

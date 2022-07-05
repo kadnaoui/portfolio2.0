@@ -10,7 +10,11 @@ const Index = () => {
     loop: false
   })
   return (
-
+    <motion.div
+    initial={{width:0}}
+    animate={{width:"100%"}}
+    exit={{x:window.innerWidth,transition:{duration:0.4}}}
+>
     <Wrapper>
 
 
@@ -28,6 +32,7 @@ const Index = () => {
         </div>
 
     </Wrapper>
+    </motion.div>
   )
 }
 
