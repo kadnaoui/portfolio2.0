@@ -56,6 +56,8 @@ form{
     height:100%;
     img{
         height:80vh;
+        background: white;
+        margin-block: 1vh;
     }
  .icons{
     display:flex;
