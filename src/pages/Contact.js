@@ -66,6 +66,7 @@ const Contact = () => {
     <motion.div
     initial={{width:0}}
     animate={{width:"100%"}}
+    className='dark:bg-slate-800 dark:text-white'
     exit={{x:window.innerWidth,transition:{duration:0.4}}}
 >
     <Wrapper>

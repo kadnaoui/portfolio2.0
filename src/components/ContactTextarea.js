@@ -9,7 +9,7 @@ const ContactTextarea = (props) => {
     <Wrapper>
       <label htmlFor={id}>{label}</label>
       <textarea
-        className={` input ${meta.touched && meta.error && "error"}`}
+        className={`dark:bg-slate-500 dark:placeholder-white input input ${meta.touched && meta.error && "error"}`}
         {...field}
         {...props}
       />

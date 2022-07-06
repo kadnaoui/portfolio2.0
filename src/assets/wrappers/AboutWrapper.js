@@ -29,7 +29,6 @@ justify-content:center;
         font-style: normal;
         font-weight: 900;
         font-size: 6vh;
-        color: #000000;
         width:88%;
     }
   
@@ -40,7 +39,6 @@ justify-content:center;
         font-style: normal;
         font-weight: 400;
         font-size:2.8vh;
-        color: #000000;
         margin-inline:6%;
     }
     .tools{
@@ -57,7 +55,6 @@ justify-content:center;
         font-style: normal;
         font-weight: 400;
         font-size:2.8vh;
-        color: #000000;
         margin:0;
     }
 }

@@ -50,10 +50,10 @@ const Projects = () => {
     };
   return (
     <DocumentMeta {...meta}>
-    <Wrapper>
+    <Wrapper className='dark:bg-slate-800 dark:text-white'>
 
      <h1 className='title'>Projects</h1>
-     <motion.div className="projects"
+     <motion.div className="projects "
          variants={container}
          initial="hidden"
          animate="visible"

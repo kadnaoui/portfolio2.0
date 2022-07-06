@@ -75,7 +75,6 @@ font-style: normal;
 font-weight: 400;
 font-size: 1.8vw;
 line-height: 2vw;
-color: #4D4C4C;
     }
 }
 .buttons{
@@ -92,6 +91,7 @@ color: #4D4C4C;
         font-weight: 400;
         font-size: 1.5vw;
         line-height: 2vw;
+        margin-block:2vh;
     }
     button:hover{
         color:white;

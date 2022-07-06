@@ -1,7 +1,8 @@
 import Styled from "styled-components"
 const Wrapper=Styled.section`
 width:100%;
-height:100vh;
+height:fit-content;
+min-height:100vh;
 display:flex;
 flex-direction:column;
 align-items:center;
@@ -15,7 +16,6 @@ position: relative;
     font-weight: 900;
     font-size: 65px;
     line-height: 100px;
-    color: #000000;
     width:100%;
     text-align:center;
     margin-block:5vh;
@@ -40,6 +40,7 @@ display:flex;
 flex-direction:column;
 align-items:center;
 justify-content:space-between;
+text-align:center;
 img{
     max-width:100%;
     max-height:65%;
@@ -51,7 +52,6 @@ h1{
     font-weight: 900;
     font-size: 1.75vw;
     line-height: 2.2vw;
-    color: #000000;
     width:100%;
     height:20%;
     display:flex;

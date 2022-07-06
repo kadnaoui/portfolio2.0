@@ -42,11 +42,11 @@ const About = () => {
     variants={container}
     initial="hidden"
     animate="visible"
-    
+    className='dark:bg-slate-800 dark:text-white'
     exit={{x:window.innerWidth,transition:{duration:0.4}}}
 >
     <Wrapper>
-        <div className="left">
+        <div className="left ">
 <h1>About Me</h1>
 <p>Hi. My name is Abderrahim Kadnaoui, I’m from Algeria and I have a Bachelor degree in Computer Science.<br/>
 I have started learning about web development in 2020 since then I gained experience in developing UserInterfaces and still looking forward to learn more and grow in this field.<br/>

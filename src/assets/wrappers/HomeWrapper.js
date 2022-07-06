@@ -83,7 +83,6 @@ display:none;
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
-                background:rgb(0,0,0,0.8);
                 color:white
             }
             

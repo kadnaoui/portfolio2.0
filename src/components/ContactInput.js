@@ -8,7 +8,7 @@ const ContactInput = (props) => {
   return (<Wrapper>
       <label htmlFor={id}>{label}</label>
       <input
-        className={` input ${meta.touched && meta.error && "error"}`}
+        className={`dark:bg-slate-500 dark:placeholder-white input ${meta.touched && meta.error && "error"}`}
         {...field}
         {...props}
       />

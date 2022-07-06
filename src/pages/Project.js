@@ -31,8 +31,8 @@ const Project = () => {
 }, ''));}
   return (
     <DocumentMeta {...meta}>
-    <Wrapper>
-        <div className='top'>
+    <Wrapper className='dark:bg-slate-800 dark:text-white'>
+        <div  className='top'>
             <h1>
 {project.title}
             </h1>
