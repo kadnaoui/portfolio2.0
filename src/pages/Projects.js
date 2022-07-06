@@ -3,9 +3,20 @@ import { motion } from 'framer-motion'
 import Wrapper from '../assets/wrappers/ProjectsWrapper'
 import Card from '../components/Card'
 import axios from 'axios'
+import DocumentMeta from 'react-document-meta';
 
 
 const Projects = () => {
+  const meta = {
+    title: 'Projects',
+    description: 'Some of of the things i did',
+    meta: {
+      charset: 'utf-8',
+      name: {
+        keywords: 'react,projects,web apps,abderrahim,webdeveloper'
+      }
+    }
+  };
   const [projects,setProjects]=React.useState([]);
   React.useEffect(() => {
     axios
@@ -38,6 +49,7 @@ const Projects = () => {
       }
     };
   return (
+    <DocumentMeta {...meta}>
     <Wrapper>
 
      <h1 className='title'>Projects</h1>
@@ -52,6 +64,7 @@ const Projects = () => {
      </motion.div>
 
     </Wrapper>
+    </DocumentMeta>
   )
 }
 

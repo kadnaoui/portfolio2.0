@@ -3,9 +3,20 @@ import Wrapper from '../assets/wrappers/AboutWrapper';
 import Image from '../assets/mecv.png'
 import { motion } from 'framer-motion';
 import CV from '../assets/MyCv.pdf'
+import DocumentMeta from 'react-document-meta'
 
 
 const About = () => {
+  const meta = {
+    title: 'About',
+    description: 'Some informations about me.',
+    meta: {
+      charset: 'utf-8',
+      name: {
+        keywords: 'react,portfolio,about'
+      }
+    }
+  };
   const item = {
     hidden: { y: 20, opacity: 0 },
     visible: {
@@ -26,6 +37,7 @@ const About = () => {
     }
   };
   return (
+    <DocumentMeta {...meta}>
     <motion.div
     variants={container}
     initial="hidden"
@@ -67,6 +79,7 @@ something I don't know, I'll figure out how to learn it.
 
     </Wrapper>
     </motion.div>
+    </DocumentMeta>
   )
 }
 

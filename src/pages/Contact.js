@@ -13,9 +13,20 @@ import ReCAPTCHA from 'react-google-recaptcha';
 import { BsLinkedin } from 'react-icons/bs';
 import { BsInstagram } from 'react-icons/bs';
 import { BsFacebook } from 'react-icons/bs';
+import DocumentMeta from 'react-document-meta';
 
 
 const Contact = () => {
+  const meta = {
+    title: 'Contact',
+    description: 'Feel free to contact me from the form bellow or dm me on my social media',
+    meta: {
+      charset: 'utf-8',
+      name: {
+        keywords: 'react,contact,abderrahim,webdeveloper'
+      }
+    }
+  };
   const recaptchaRef = React.createRef();
     const initialValues=  {
         Name: "",
@@ -51,6 +62,7 @@ const Contact = () => {
       }
 
   return (
+    <DocumentMeta {...meta}>
     <motion.div
     initial={{width:0}}
     animate={{width:"100%"}}
@@ -87,6 +99,7 @@ const Contact = () => {
     </Wrapper>
     
     </motion.div>
+    </DocumentMeta>
   )
 }
 

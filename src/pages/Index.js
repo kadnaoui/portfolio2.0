@@ -3,13 +3,25 @@ import Shape from '../components/3D'
 import Wrapper from '../assets/wrappers/HomeWrapper'
 import { useTypewriter } from 'react-simple-typewriter'
 import { motion } from 'framer-motion'
+import DocumentMeta from 'react-document-meta';
 
 const Index = () => {
+  const meta = {
+    title: 'Abderrahim',
+    description: "Abderrahim Kadnaoui's Portfolio Website",
+    meta: {
+      charset: 'utf-8',
+      name: {
+        keywords: 'react,Web,abderrahim,webdeveloper, frontend'
+      }
+    }
+  };
   const {text} = useTypewriter({
     words: ['Web Developer','(Frontend)'],
     loop: false
   })
   return (
+    <DocumentMeta {...meta}>
     <motion.div
     initial={{width:0}}
     animate={{width:"100%"}}
@@ -33,6 +45,7 @@ const Index = () => {
 
     </Wrapper>
     </motion.div>
+    </DocumentMeta>
   )
 }
 

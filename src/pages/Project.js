@@ -2,10 +2,22 @@ import React from 'react'
 import { useParams  } from "react-router-dom";
 import Wrapper from '../assets/wrappers/ProjectWrapper';
 import axios from 'axios';
+import DocumentMeta from 'react-document-meta';
 
   
 const Project = () => {
-    const [project,setProject]=React.useState({})
+  
+  const [project,setProject]=React.useState({})
+  const meta = {
+    title: project?project.title:'Project',
+    description:project? project.description:' ',
+    meta: {
+      charset: 'utf-8',
+      name: {
+        keywords: 'react,projects,web apps,abderrahim,webdeveloper'
+      }
+    }
+  };
   const {id}=useParams()
   React.useEffect(() => {
     axios
@@ -18,6 +30,7 @@ const Project = () => {
     return data + String.fromCharCode(byte);
 }, ''));}
   return (
+    <DocumentMeta {...meta}>
     <Wrapper>
         <div className='top'>
             <h1>
@@ -43,6 +56,7 @@ const Project = () => {
             </div>
         </div>
     </Wrapper>
+    </DocumentMeta>
   )
 }
 

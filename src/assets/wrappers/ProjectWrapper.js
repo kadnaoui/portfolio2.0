@@ -4,7 +4,7 @@ const Wrapper=styled.section`
 @import url('https://fonts.googleapis.com/css2?family=Heebo&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
 width:100%;
-height:100vh;
+min-height:100vh;
 display:flex;
 flex-direction:column;
 align-items:center;
@@ -44,14 +44,15 @@ hr{
     width:100%;
     mix-blend-mode: normal;
     border-top: 0.2vw solid rgb(0,0,0,0.5);
-    margin-block:7%;
+    margin-block:2%;
 }
 .bottom{
     display:flex;
-    align-items:flex-start;
+    align-items:flex-end;
     justify-content:space-between;
-    height:60vh;  
+    height:fit-content;  
     width:100%;
+    margin-block:2%;
 .description{
     width:70%;
     height:100%;
