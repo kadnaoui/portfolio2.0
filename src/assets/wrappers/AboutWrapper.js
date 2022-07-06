@@ -16,7 +16,6 @@ justify-content:center;
         width:40%;
         justify-content: flex-end;
         align-items: flex-start;
-        margin-top:6vh;
         img{
             max-width:80%;max-height:65%;
         }
@@ -105,6 +104,7 @@ button:hover{
     order:1;
     width:100%;
     min-height:50vh;
+    margin-top:6vh;
     img{ margin:auto;}
     }
 

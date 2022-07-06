@@ -44,7 +44,8 @@ text-align:center;
 img{
     max-width:100%;
     max-height:65%;
-    margin:auto
+    margin:auto;
+    border-radius:2vh;
 }
 h1{
     font-family: 'Heebo';
