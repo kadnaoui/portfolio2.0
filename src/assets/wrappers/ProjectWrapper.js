@@ -53,6 +53,7 @@ hr{
     height:fit-content;  
     width:100%;
     margin-block:2%;
+    min-height: 40vh;
 .description{
     width:70%;
     height:100%;
