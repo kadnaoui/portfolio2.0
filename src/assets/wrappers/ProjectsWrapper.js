@@ -36,9 +36,13 @@ height: 29vw;
 border:0.3vw solid black;
 padding:1vh;
 margin:3vh;
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:space-between;
 img{
     max-width:100%;
-    max-height:70%;
+    max-height:65%;
     margin:auto
 }
 h1{
@@ -49,7 +53,7 @@ h1{
     line-height: 2.2vw;
     color: #000000;
     width:100%;
-    height:30%;
+    height:20%;
     display:flex;
     justify-content:center;
     align-items:center;
