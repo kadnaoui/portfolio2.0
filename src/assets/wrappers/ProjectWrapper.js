@@ -43,7 +43,6 @@ padding:6%;
 hr{
     width:100%;
     mix-blend-mode: normal;
-    border-top: 0.2vw solid rgb(0,0,0,0.5);
     margin-block:2%;
 }
 .bottom{

@@ -31,7 +31,7 @@ const HTMLContent = () => {
       <h1 > 
         <span>
       <b className="first">Hi, I am Abderrahim Kadnaoui.</b> Welcome to My Portfolio </span> <br/>{' '}
-        <span className="dark:bg-transparent bg-black/60 type" >
+        <span className="dark:bg-transparent bg-black/80 type  text-blue-700" >
          {text}
         </span>
         <br/>

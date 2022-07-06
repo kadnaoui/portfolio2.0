@@ -83,7 +83,6 @@ display:none;
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
-                color:white
             }
             
         }
@@ -104,6 +103,8 @@ display:none;
             .type{
               
                 font-size:12vw;
+                font-weight:bold;
+                color:white;
             
             }
             
