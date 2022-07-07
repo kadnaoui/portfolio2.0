@@ -36,7 +36,7 @@ const Index = () => {
         <h1 > 
         <span>
       <b className="intro">Hi, I am Abderrahim Kadnaoui,</b><br/> Welcome to My Portfolio </span> <br/>{' '}
-        <span className="typing" >
+        <span className="typing dark:text-white  text-blue-700" >
          {text}
         </span>
         <br/>

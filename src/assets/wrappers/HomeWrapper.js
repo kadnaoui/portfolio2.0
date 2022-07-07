@@ -36,7 +36,6 @@ display:none;
         .typing{
             font-size:6vw; 
             height:9vw;
-            color:blue;
         }
 
     }
