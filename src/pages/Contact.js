@@ -77,7 +77,7 @@ const Contact = () => {
   <ContactInput id='Email' name='Email' label='Email' placeholder='Name' type='email'  />
   <ContactInput id='Subject' name='Subject' label='Subject' placeholder='Subject'type='text' />
   <ContactTextarea id='Text' name='Text' label='Text' placeholder='Text'  type='text' />
- <button type='submit' className='button' >Send</button>
+ <button type='submit' className='button border-2 border-black hover:text-white text-black dark:text-white dark:border-white hover:border-2 hover:bg-black hover:border-black' >Send</button>
  
  
   </Form>

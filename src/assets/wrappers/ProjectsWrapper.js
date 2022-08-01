@@ -45,7 +45,7 @@ img{
     width:100%;
     height:100%;
     object-fit:cover;
-    border: 0.2vw solid black;
+    border: 0.5vh solid black;
     border-radius:2vh;
 }
 h1{
@@ -63,10 +63,10 @@ h1{
     align-items:center;
     opacity: 0;
     transition: all 0.3s ease;
+    background-color:rgba(0,0,0,0.8);
+    border-radius:2vh;
     &:hover{
         opacity: 1;
-        background-color:rgba(0,0,0,0.8);
-        border-radius:2vh;
     }
 }
 
@@ -82,10 +82,10 @@ h1{
     .project{
         width: 100%;
         height: 50vh;
-        border: 1vw solid black;
     h1{
         font-size:10vw;
         line-height:12vw;
+        opacity: 1;
     }
 
 }

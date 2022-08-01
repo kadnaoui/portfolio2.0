@@ -15,14 +15,13 @@ form{
     margin-left:7vw;
     width:50vw;
     button{
-        border: 0.5vh solid #000000;
+        
         width:40%;
         margin:auto;
         font-weight:500;
     }
     button:hover{
-        color:white;
-        background:black;
+       
         transition: 0.2s ease-in
     }
     h1{
