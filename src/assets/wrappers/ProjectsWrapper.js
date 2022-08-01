@@ -11,7 +11,7 @@ z-index: 1;
 padding-block:10vh;
 position: relative;
 .title{
-    font-family: 'Heebo';
+    font-family: 'Heebo', sans-serif;
     font-style: normal;
     font-weight: 900;
     font-size: 65px;
@@ -31,9 +31,9 @@ position: relative;
 }
 
 .project{
+position: relative;
 width: 33vw;
 height: 29vw;
-border:0.3vw solid black;
 padding:1vh;
 margin:3vh;
 display:flex;
@@ -42,22 +42,32 @@ align-items:center;
 justify-content:space-between;
 text-align:center;
 img{
-    max-width:100%;
-    max-height:65%;
-    margin:auto;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    border: 0.2vw solid black;
     border-radius:2vh;
 }
 h1{
-    font-family: 'Heebo';
+    position: absolute;
+    font-family: 'Heebo', sans-serif;
     font-style: normal;
     font-weight: 900;
-    font-size: 1.75vw;
+    font-size: 2vw;
     line-height: 2.2vw;
-    width:100%;
-    height:20%;
+    width:90%;
+    height:50%;
+    top:25%;
     display:flex;
     justify-content:center;
     align-items:center;
+    opacity: 0;
+    transition: all 0.3s ease;
+    &:hover{
+        opacity: 1;
+        background-color:rgba(0,0,0,0.8);
+        border-radius:2vh;
+    }
 }
 
 }

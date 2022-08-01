@@ -18,12 +18,13 @@ const Projects = () => {
     }
   };
   const [projects,setProjects]=React.useState([]);
+  console.log(projects);
   React.useEffect(() => {
     axios
       .get("https://abderrahim-projects.herokuapp.com/projects")
       .then((res) => setProjects(res.data))
       .catch((err) => console.log(err, "it has an error"));
-  });
+  },[]);
   const displayProjects=()=>{
     return  projects.map(p=>
         <Card img={p.image.data.data} key={p._id} id={p._id} variants={item} title={p.title} /> )
