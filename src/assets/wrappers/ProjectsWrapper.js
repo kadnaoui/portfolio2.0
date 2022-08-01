@@ -63,6 +63,7 @@ h1{
     align-items:center;
     opacity: 0;
     transition: all 0.3s ease;
+    color: #fff;
     background-color:rgba(0,0,0,0.8);
     border-radius:2vh;
     &:hover{
