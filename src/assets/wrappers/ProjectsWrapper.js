@@ -28,6 +28,10 @@ position: relative;
     align-items:center;
     justify-content:space-evenly;
     flex-wrap:wrap;
+    .loading{
+        width:20vw;
+        height: 20vh;
+    }
 }
 
 .project{

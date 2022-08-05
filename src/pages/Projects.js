@@ -4,7 +4,8 @@ import Wrapper from '../assets/wrappers/ProjectsWrapper'
 import Card from '../components/Card'
 import axios from 'axios'
 import DocumentMeta from 'react-document-meta';
-
+import ReactLoading from 'react-loading';
+ 
 
 const Projects = () => {
   const meta = {
@@ -26,9 +27,15 @@ const Projects = () => {
       .catch((err) => console.log(err, "it has an error"));
   },[]);
   const displayProjects=()=>{
+   if (projects.length==0) {
+    return <div className='loading'>
+      <ReactLoading type='spokes' color='grey' height='100%' width='100%' />
+    </div>
+   }else{
     return  projects.map(p=>
-        <Card img={p.image.data.data} key={p._id} id={p._id} variants={item} title={p.title} /> )
-  
+      <Card img={p.image.data.data} key={p._id} id={p._id} variants={item} title={p.title} /> )
+
+   }
     }
     const container = {
       hidden: { opacity: 1, scale: 0 },
