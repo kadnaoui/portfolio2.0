@@ -19,7 +19,6 @@ const Projects = () => {
     }
   };
   const [projects,setProjects]=React.useState([]);
-  console.log(projects);
   React.useEffect(() => {
     axios
       .get("https://abderrahim-projects.herokuapp.com/projects")

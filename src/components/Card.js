@@ -11,7 +11,11 @@ const Card = ({img,variants,title,id}) => {
     const displayFront=()=>{
        return <>
         <img src={`data:image/png;base64,${base64String}`}/>
-    <h1>{title}</h1>
+    <div className='hover'>
+      <h1>{title}</h1>
+      <p>(Click for details)</p>
+      </div>
+    
     </>
     }
    
@@ -21,7 +25,7 @@ const Card = ({img,variants,title,id}) => {
     className='project'
     variants={variants}
     onClick={()=>navigate(`${id}`)}
-  whileHover={{ scale: 1.2,
+    whileHover={{ scale: 1.2,
     borderRadius: "10%" }}
   whileTap={{
     scale: 0.8,

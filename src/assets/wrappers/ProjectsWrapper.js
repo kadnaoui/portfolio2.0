@@ -52,7 +52,7 @@ img{
     border: 0.5vh solid black;
     border-radius:2vh;
 }
-h1{
+.hover{
     position: absolute;
     font-family: 'Heebo', sans-serif;
     font-style: normal;
@@ -63,15 +63,21 @@ h1{
     height:50%;
     top:25%;
     display:flex;
-    justify-content:center;
+    flex-direction:column;
+    justify-content:space-evenly;
     align-items:center;
     opacity: 0;
     transition: all 0.3s ease;
     color: #fff;
     background-color:rgba(0,0,0,0.8);
     border-radius:2vh;
+    cursor:pointer;
     &:hover{
         opacity: 1;
+    }
+    p{
+        font-size:1.3vw;
+        font-weight:300;
     }
 }
 
@@ -87,10 +93,14 @@ h1{
     .project{
         width: 100%;
         height: 50vh;
-    h1{
+    .hover{
         font-size:10vw;
         line-height:12vw;
         opacity: 1;
+        p{
+            font-size:8vw;
+            font-weight:300;
+        }
     }
 
 }
