@@ -17,7 +17,9 @@ justify-content:center;
         justify-content: flex-end;
         align-items: flex-start;
         img{
-            max-width:80%;max-height:65%;
+            max-width:80%;
+            max-height:65%;
+            margin-inline:auto;
         }
     }
 .left{
@@ -62,6 +64,8 @@ button{
     width:40%;
     font-weight:500;
     margin-block:3vw;
+    padding: 8px;
+    font-size: 24px;
 }
 button:hover{
     color:white;
